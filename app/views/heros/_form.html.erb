@@ -1,0 +1,52 @@
+<%= form_with(model: hero) do |form| %>
+  <% if hero.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(hero.errors.count, "error") %> prohibited this hero from being saved:</h2>
+
+      <ul>
+        <% hero.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :title_2, style: "display: block" %>
+    <%= form.text_field :title_2 %>
+  </div>
+
+  <div>
+    <%= form.label :sub_title, style: "display: block" %>
+    <%= form.text_field :sub_title %>
+  </div>
+
+  <div>
+    <%= form.label :sub_title_2, style: "display: block" %>
+    <%= form.text_field :sub_title_2 %>
+  </div>
+  
+  <div>
+    <%= form.label :pic, style: "display: block" %>
+    <%= form.file_field :pic %>
+  </div>
+
+  <div>
+    <%= form.label :texte, style: "display: block" %>
+    <%= form.text_field :texte %>
+  </div>
+
+  <div>
+    <%= form.label :texte_2, style: "display: block" %>
+    <%= form.text_field :texte_2 %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
