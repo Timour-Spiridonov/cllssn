@@ -1,14 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Products</h1>
+<h1>OUR SHOP</h1>
 
-<div id="products">
-  <% @products.each do |product| %>
-    <%= render product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
-  <% end %>
+  <div id="products" class="container " >
+    <div class="grid-container-shop">
+      <% @products.each do |product| %>
+       <div class="grid-item">
+          <%= link_to  product do %>
+              <%= render(MicrocardComponent.new(price: 100,product: product)) %>
+          <%end%>
+       </div>
+      <% end %>
+        <%= link_to "New product", new_product_path %>
+        <%=render 'layouts/footer'%>
+   </div>
+ 
 </div>
 
-<%= link_to "New product", new_product_path %>
+
+

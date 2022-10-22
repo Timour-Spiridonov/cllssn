@@ -11,12 +11,28 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="">
   <% if notice %>
      <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+     <p class="alert"><%= alert %></p>
   <%end%>
-   <%= render 'layouts/navbar'%>
+  <div class="container">
+     <%= render 'layouts/navbar'%>
+ </div>
+  <%if @cart%>
+  <div  class="container">
+ 
+    <%= render @cart%>
+
+  </div>
+
+   <%end%>
+
+ <div style=" margin-bottom:50px;">
     <%= yield %>
+  </div>
+ 
+   <%= render 'layouts/footer'%>
   </body>
+  
 </html>

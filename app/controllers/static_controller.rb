@@ -1,6 +1,9 @@
 class StaticController < ApplicationController
+
+
   def home
-    @hero=Hero.last
+    @hero=Hero.with_attached_pic.last
+    @products = Product.take(3)
   end
 
   def challenge

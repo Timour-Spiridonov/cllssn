@@ -1,0 +1,15 @@
+<div id="<%= dom_id cart %>">
+
+<h2>Pragmatic cart </h2>
+<table>
+   <%= render(@cart.line_items) %>
+     
+  
+<tfoot>
+ <tr>
+   <th>TOTAL : </th>
+   <td> <%= @cart.total_price%> DT</td>
+</tr>
+</tfoot>
+</table>
+</div>

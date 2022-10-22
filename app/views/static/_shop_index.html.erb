@@ -1,0 +1,8 @@
+
+  <h3 class="mid-text text-center">OUR SHOP</h3>
+    <div class="shop-caroussel">
+               
+      <% @products.each do |product| %>
+      <%= render(MicrocardComponent.new(price: 200, product: product ))%>
+     <%end%>
+    </div>

@@ -75,7 +75,7 @@ h2{
 
 @font-face {
     font-family: cocofont;
-    src: url('fonts/cocogoose_pro-trial-webfont.woff');
+    src: url('cocogoose_pro-trial-webfont.woff')format('woff');
     font-weight: bold;
   }
 /* Container  */
@@ -85,8 +85,32 @@ h2{
     grid-template-columns: 40% 40% ;
     column-gap: 12%;
     z-index: 2;
+} 
+.size-circle{
     
-   
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid green 1px;
+}
+.grid-container-shop{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 15%;
+}
+.container-card-show{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+ 
+    
+}
+.card-show{
+    padding: 20px;
+    width: 30%;
 }
 .parent{
     margin-top: 50px;
@@ -206,7 +230,7 @@ ul {
 .padt1{
     padding-top: 10px;
 }
-.nav-item{
+.nav-itemOf{
     background-color:  var(--greenof);
 }
 .cart-text-big {
@@ -493,3 +517,12 @@ nav>ul{
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
 }
+.footer-test{
+    
+        background-color: lightgrey;
+        border-style: groove;
+        overflow: auto;
+        width: 100%;
+        height: 75px;
+     
+    }

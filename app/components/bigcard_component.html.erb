@@ -1,0 +1,29 @@
+ 
+   <div class="container-card-show ">
+      <div class="card-product ">
+        <% if @product.image.attached?%>
+        <%= image_tag @product.image  %>
+        <% else%>
+         <img src="https://images.unsplash.com/photo-1475178626620-a4d074967452?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1372&q=80" alt="">
+         <%end%>
+      </div>
+         <div class=" text-center card-show">
+            <p class='mid-text'>
+               <%=@product.name%>
+            </p>
+            <p> <%=@product.price%> DT</p>
+            <div class="green" style="height:2px;"></div>
+            <div class="grid-container-shop">
+               <div class="grid_item size-circle" >35</div>
+               <div class="grid_item size-circle" >36</div>
+               <div class="grid_item size-circle" >37</div>
+               <div class="grid_item size-circle" >38</div>
+               <div class="grid_item size-circle" >39</div>
+               <div class="grid_item size-circle" >40</div>
+            </div>
+           
+            <%= button_to 'ADD TO CART', line_items_path(product_id: @product), class: 'btn-cllsn'%>
+
+         </div>
+      </div>
+   </div>

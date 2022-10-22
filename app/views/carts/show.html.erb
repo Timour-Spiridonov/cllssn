@@ -1,0 +1,8 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cart %>
+
+<div>
+ 
+  <%= button_to "Vider le panier", @cart, method: :delete, data: {confirm: "Etes vous sur ?"} %>
+</div>
